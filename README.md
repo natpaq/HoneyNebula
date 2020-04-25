@@ -6,7 +6,7 @@ Elizabeth Poggie
 
 ## Abstract
 
-A honeypot is a decoy IT infrastructure that is meant to lure attackers by appearing vulnerable. They come in a variety of different architectures each giving the attackers different levels of access to the operating system. Once attacked, information regarding the attack and the attacker can be analyzed. In this project, by leveraging the Google Cloud Platform (GCP) we are able to increase the attack surface through the use of multiple IP addresses that span the globe. From this, we can compare the statistics related to attack methods, locations, and the frequency of attacks for a given IP address. From this data, we will be able to study the attackers behaviour and determine which honeypot systems are attacked the most and why. 
+A honeypot is a decoy IT infrastructure that is meant to lure attackers by appearing vulnerable. They come in a variety of different architectures that give attackers different levels of access to the operating system. Once attacked, information regarding the attack and the attacker can be analyzed. In this project, by leveraging the Google Cloud Platform (GCP) we are able to increase the attack surface through the use of multiple IP addresses that span the globe. From this, we can compare the statistics related to attack methods, locations, and the frequency of attacks for a given IP address. With this data, We can study the attackers behaviour and determine which honeypot systems are attacked the most and why. 
 
 
 ## Introduction
@@ -14,9 +14,10 @@ A honeypot is a decoy IT infrastructure that is meant to lure attackers by appea
 
 ## Procedure 
 
-We set up multiple Honeypot architectures in their own VM instance within the Google Cloud Platform. Each honeypot was taken from Paralax’s “awesome-honeypots” github repository and from this list, our focus was the T-Pot. This is a multi-honeypot platform that has additional features such as Elasticsearch for retrieving back end information, kibana for visualizing the attack log information which is necessary for us to make our observations. The T-pot is based on the network installer Debian which allows multiple honeypot daemons to run on the same network interface. able to manage so many honeypot categories is that it runs everything as a dockerized environment where each container is a sub category. Depending on the protocol the attacker is trying to access, the T-pot routes them to a particular container.
+We set up multiple Honeypot architectures in their own VM instance within the Google Cloud Platform. Each honeypot was taken from Paralax’s “awesome-honeypots” github repository and from this list, we focused on the T-Pot. This is a multi-honeypot platform that has additional features such as Elasticsearch for retrieving back end information, Kibana for visualizing the attack log information that is necessary to make our observations. The T-pot is based on the network installer Debian which allows multiple honeypot daemons to run on the same network interface. The T-pot is a dockerized environment where each container is a sub category so depending on the protocol the attacker is trying to access, the T-pot routes them to a particular container.
 
 ## Results
+
 xxxx
 
 ## Discussion
