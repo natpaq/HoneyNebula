@@ -6,12 +6,11 @@ Elizabeth Poggie
 
 ## Abstract
 
-A honeypot is a decoy IT infrastructure that is meant to lure attackers by appearing vulnerable. They come in a variety of different architectures that give attackers different levels of access to the operating system from low interaction to high interaction. Once attacked, information regarding the attack and the attacker is captured by the honeypot. In this project, by leveraging the Google Cloud Platform (GCP) we are able to increase the attack surface through the use of multiple honeypots that span the globe. From this, we can compare the statistics related to attack methods, locations, and the frequency of attacks for a given IP address. This is especially important now as most of the world working from home, so with this project we can study the attackers behaviour and determine which systems are attacked the most and why.
-
+A honeypot is a decoy IT infrastructure that is meant to lure attackers by appearing vulnerable. They come in a variety of different architectures that give attackers different levels of access to the operating system from low interaction to high interaction. Once attacked, information regarding the attack and the attacker is captured by the honeypot. In this project, by leveraging the Google Cloud Platform (GCP) we are able to increase the attack surface through the use of multiple honeypots that span the globe. From this, we can compare the statistics related to attack methods, locations, and the frequency of attacks for a given IP address. This is especially important now as most of the world is working from home, so with this project we can study the attackers behaviour and determine which systems are attacked the most and why.
 
 ## Introduction
 
-There are various attack patterns that target different protocols on the internet. 
+
 
 ## Procedure 
 
