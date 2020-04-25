@@ -6,27 +6,32 @@ Elizabeth Poggie
 
 ## Abstract
 
-A honeypot is a decoy IT infrastructure that is meant to lure attackers by appearing vulnerable. They come in a variety of different architectures that give attackers different levels of access to the operating system from low interaction to high interaction. Once attacked, information regarding the attack and the attacker is captured by the honeypot. In this project, by leveraging the Google Cloud Platform (GCP) we are able to increase the attack surface through the use of multiple honeypots that span the globe. From this, we can compare the statistics related to attack methods, locations, and the frequency of attacks for a given IP address. This is especially important now as most of the world is working from home, so with this project we can study the attackers behaviour and determine which systems are attacked the most and why.
+There are pitfalls to certain infastrcutre setups and these are highlighted by analyzing different vulnerabiliuties of system archetectures. The benefit of a Honeypot is that they can reflect a subset of these vulnerabilities.  A honeypot is a decoy IT infrastructure that is meant to lure attackers by appearing vulnerable. They come in a variety of different architectures that give attackers different levels of access to the operating system from low interaction to high interaction. Once attacked, information regarding the attack and the attacker is captured by the honeypot. In this project, by leveraging the Google Cloud Platform (GCP) we are able to increase the attack surface through the use of multiple honeypots that span the globe. From this, we can compare the statistics related to attack methods, locations, and the frequency of attacks for a given IP address. This is especially important now as most of the world is working from home, so with this project, we can study the attackers behaviour and determine which systems are attacked the most and why.
 
 ## Introduction
 
+We set up multiple Honeypot architectures in their own VM instance within the Google Cloud Platform. We made sure that each honeypot was based in a different location so that we can maximize the variety of our data. To get all these honeypot architectures, we took them from Paralax’s “awesome-honeypots” github repository and from this list, we focused on the T-Pot developed by T-Mobile. This is a multi-honeypot platform that has additional features such as Elasticsearch for retrieving back end information, Kibana for visualizing the attack log information that is necessary to make our observations, and an ELK stack that centralizes these 2 essential components. The T-pot is based on the network installer Debian which allows multiple honeypot daemons to run on the same network interface. The T-pot is a dockerized environment where each container is a sub category so depending on the protocol the attacker is trying to access, the T-pot routes them to a particular container.
 
+.... will add more about different honey pot models here .....
 
 ## Procedure 
 
-We set up multiple Honeypot architectures in their own VM instance within the Google Cloud Platform. Each honeypot was taken from Paralax’s “awesome-honeypots” github repository and from this list, we focused on the T-Pot. This is a multi-honeypot platform that has additional features such as Elasticsearch for retrieving back end information, Kibana for visualizing the attack log information that is necessary to make our observations. The T-pot is based on the network installer Debian which allows multiple honeypot daemons to run on the same network interface. The T-pot is a dockerized environment where each container is a sub category so depending on the protocol the attacker is trying to access, the T-pot routes them to a particular container.
+1. Made a Google Cloud Platform account
+2. Deployed several different architectures each on their own VM to find the one that best suited our goals
+3. Wrote a script to auto-deploy the VMs
+4. Harvested data
 
 ## Results
 
-xxxx
+xxx
 
 ## Discussion
 
-xxxx
+xxx
 
 ## Conclusion
 
-xxx
+honeypots are cool
 
 ## References
 
