@@ -1,0 +1,5 @@
+# Ignore GCP account credentials
+account.json
+
+# Ignore Terraform cached providers 
+.terraform
