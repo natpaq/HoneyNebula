@@ -35,11 +35,15 @@ The results from p0f in which p0f was able to identify the OS being run on the m
 
 ## Discussion
 
-Heralding honeypot is only within the top 5 for Montreal compared to our other locations. This is a honeypot designed to catch login attempts over several protocols such as ftp, http/https, telnet, pop3/pop3s, ssh, and smtp [11].
+Heralding honeypot is only within the top 5 for Montreal compared to our other locations. This is a honeypot designed to catch login attempts over several protocols such as ftp, http/https, telnet, pop3/pop3s, ssh, and smtp [11]. 
 
+Most of the attacks from the Heralding honeypot occured before 8 am from Bulgaria. 
+
+Montreal Attacks by Country
 <img src="/data_visualization/by_country/montreal_attack_by_contry_and_by_hour.png"/>
 
-<img src="/data_visualization/by_country/vulnerable_honeypots_in_montreal_by_the_hour.png"/>
+Montreal Alerts
+<img src="/data_visualization/by_country/alert_category_for_montreal.png"/>
 
 ## Conclusion
 
