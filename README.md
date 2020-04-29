@@ -32,7 +32,7 @@ Table y: Top 5 Attacks
  <img src="/data_visualization/by_country/attacks_top5.png" width="2000"/>
  
  Figure y++: Attacks by Country for Different Deployments
- 
+
  <img src="/data_visualization/by_country/attacks_by_country.png"/>
 
 Most of the attacks on the Heralding honeypot in Montreal occured before 8 am from Bulgaria as seen in Figure x. Activity associated with this time frame are categroized as "Misc activity" in our Suricata Altert histogram in Figure x++. 
@@ -50,7 +50,7 @@ The results from p0f in which p0f was able to identify the OS being run on the m
 
 ## Discussion
 
-Heralding honeypot is only within the top 5 for Montreal compared to our other locations. This is a honeypot designed to catch login attempts over several protocols such as ftp, http/https, telnet, pop3/pop3s, ssh, and smtp [11]. 
+Heralding honeypot is only within the top 5 for Montreal compared to our other locations. This is a honeypot designed to catch malicious login attempts over several protocols such as ftp, http/https, telnet, pop3/pop3s, ssh, and smtp [11]. This Misc Activity associated with these attacks is large in number, but low severity [citation needed].
 
 
 ## Conclusion
