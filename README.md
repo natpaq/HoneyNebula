@@ -50,7 +50,7 @@ The results from p0f in which p0f was able to identify the OS being run on the m
 
 ## Discussion
 
-Heralding honeypot is only within the top 5 for Montreal compared to our other locations. This is a honeypot designed to catch malicious login attempts over several protocols such as ftp, http/https, telnet, pop3/pop3s, ssh, and smtp [11]. This Misc Activity associated with these attacks is large in number, but low severity [citation needed].
+Heralding honeypot is only within the top 5 for Montreal compared to our other locations. This is a low interaction honeypot designed to capture credentials from malicious login attempts over several protocols such as ftp, http/https, telnet, pop3/pop3s, ssh, and smtp [11][12]. The Misc Activity associated with these attacks taken from Figure x++ is large in number, but low severity [citation needed].
 
 
 ## Conclusion
@@ -80,3 +80,5 @@ honeypots are cool
 [10]xxx https://github.com/paralax/awesome-honeypots
 
 [11]xxx http://www.covert.io/adventures-with-heralding-a-credential-grabbing-honeypot/
+
+[12]xxx https://sectechno.com/heralding-credentials-catching-honeypot/
