@@ -14,8 +14,6 @@ Honeypots come in a variety of different architectures that give attackers diffe
 
 In this project, several different honeypot architectures were set up as their own VM instances within the GCP. In order to make the results of this research relevant on a global scale, each honeypot was based in a different location. The different honeypot architectures that were deployed in order to be tested were taken from Paralax’s “awesome-honeypots” GitHub repository[10]. The T-Pot honeypot developed by T-Mobile became the focus for this research, due to the variety of results that emerge from its multi-honeypot platform[9]. This platform has additional features including an ELK stack, which includes Elasticsearch for retrieving back end information, Kibana for visualizing the attack log information that is necessary to make our observations and Logstash in order to log information related to attacks and attackers[9]. The T-Pot is based on the network installer Debian which allows multiple honeypot daemons to run on the same network interface. The T-Pot is a dockerized environment where each honeypot daemon is dockerized and contained in its own environment[6]. This means that depending on the protocol the attacker is trying to access, they will be routed to a particular container by T-Pot.  
 
-.... will add more about different honey pot models here .....
-
 ## Procedure 
 
 1. Made a GCP account
@@ -37,7 +35,11 @@ The results from p0f in which p0f was able to identify the OS being run on the m
 
 ## Discussion
 
-Why is heraldiong honeypot big in montreal?
+Heralding honeypot is only within the top 5 for Montreal compared to our other locations. This is a honeypot designed to catch login attempts over several protocols such as ftp, http/https, telnet, pop3/pop3s, ssh, and smtp [11].
+
+<img src="/data_visualization/by_country/montreal_attack_by_contry_and_by_hour.png"/>
+
+<img src="/data_visualization/by_country/vulnerable_honeypots_in_montreal_by_the_hour.png"/>
 
 ## Conclusion
 
@@ -64,3 +66,5 @@ honeypots are cool
 [9]xxx https://dtag-dev-sec.github.io/mediator/feature/2015/03/17/concept.html
 
 [10]xxx https://github.com/paralax/awesome-honeypots
+
+[11]xxx http://www.covert.io/adventures-with-heralding-a-credential-grabbing-honeypot/
