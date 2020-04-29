@@ -35,15 +35,15 @@ Table y: Top 5 Attacks
  
  <img src="/data_visualization/by_country/attacks_by_country.png"/>
 
-Most of the attacks on the Heralding honeypot in Montreal occured before 8 am from Bulgaria as seen in Figure x. Activity associated with this time frame are categroized as "Misc activity" in our Suricata Altert histogram in Figure x++. 
+Most of the attacks on the Heralding honeypot in Montreal occured before 8 am from Bulgaria as seen in Figure x. Activity associated with this time frame are categorized as "Misc activity" in our Suricata Alert histogram in Figure x++. 
 
 Figure x: Montreal Attacks by Country
 
 <img src="/data_visualization/by_country/montreal_attack_by_contry_and_by_hour.png"/>
 
-Figure x++: Montreal Alerts
+Figure x++: Suricata Alert Categories
 
-<img src="/data_visualization/by_country/alert_category_for_montreal.png"/>
+<img src="/data_visualization/by_country/alert_categories.png"/>
 
 
 The results from p0f in which p0f was able to identify the OS being run on the machines of attackers showed that most of the machines were running Windows 7 or 8. Some repeat attackers across all the different honeypot locations were Petersburg Internet Network ltd., Chinanet and Viettel Corporation. Destination ports that were repeatedly seen to be attacked were 445, 443, 1433 and 8088.
@@ -51,6 +51,8 @@ The results from p0f in which p0f was able to identify the OS being run on the m
 ## Discussion
 
 Heralding honeypot is only within the top 5 for Montreal compared to our other locations. This is a honeypot designed to catch login attempts over several protocols such as ftp, http/https, telnet, pop3/pop3s, ssh, and smtp [11]. 
+
+Among the predominant Suricata alert categories for each different deployment, the priority (and thus risk level) of the attack types vary (refer to Figure x++). In São Paulo, the most frequent type of alert category seen was the "Attempted Administrator Privilege Gain" alert, which is of the highest Suricata priority level(1) and indicates. The main attack types for Los Angeles, Frankfurt and Tokyo are of a  slightly lower priority level(2). The honeypot that predominantly had attacks of the lowest priority level was Montreal.
 
 
 ## Conclusion
@@ -80,3 +82,5 @@ honeypots are cool
 [10]xxx https://github.com/paralax/awesome-honeypots
 
 [11]xxx http://www.covert.io/adventures-with-heralding-a-credential-grabbing-honeypot/
+
+[12]xxx https://redmine.openinfosecfoundation.org/attachments/1529
