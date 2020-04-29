@@ -29,7 +29,9 @@ In this project, several different honeypot architectures were set up as their o
 
 In the first part of the project, statistics were compared from honeypots stationed in five different locations: Montréal, São Paulo, Los Angeles, Frankfurt and Tokyo over a twenty-four hour period. Across all of these honeypots, the dionaea honeypot was the most attacked, with the cowrie honeypot being the second most attacked. The honeytrap honeypot was the third most attacked across almost all locations, with the exception being that the honeypot stationed in Montréal had the heralding honeypot as its third most attacked honeypot.
 
--- will insert photos here --
+ <img src="/data_visualization/by_country/attacks_top5.png" width="2000"/>
+ Attacks by Country for Different Deployments
+ <img src="/data_visualization/by_country/attacks_by_country.png"/>
 
 The results from p0f in which p0f was able to identify the OS being run on the machines of attackers showed that most of the machines were running Windows 7 or 8. Some repeat attackers across all the different honeypot locations were Petersburg Internet Network ltd., Chinanet and Viettel Corporation. Destination ports that were repeatedly seen to be attacked were 445, 443, 1433 and 8088.
 
