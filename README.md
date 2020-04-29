@@ -12,7 +12,7 @@ A honeypot is a decoy IT infrastructure that is meant to lure attackers by appea
 
 Honeypots come in a variety of different architectures that give attackers different levels of access to the operating system. They are classified as either low interaction, medium interaction or high interaction honeypots. Low interaction honeypots give attackers minimal access to the system's operating system, making their deception more detectable by attackers. They are mainly used to detect known attack types and methods. Higher interaction honeypots give attackers more freedom to interact with the operating system and are thus harder to detect by attackers[7]. Attackers are also much more likely to interact more with higher interaction honeypots for that reason. The information regarding the exact methods an attacker uses to try to gain access on such a system can then be analyzed by whoever deployed the honeypots, making them useful cybersecurity tools.  
 
-In this project, several different honeypot architectures were set up as their own VM instances within the GCP. In order to make the results of this research relevant on a global scale, each honeypot was based in a different location. The different honeypot architectures that were deployed in order to be tested were taken from Paralax’s “awesome-honeypots” GitHub repository[cit needed]. The T-Pot honeypot developed by T-Mobile became the focus for this research, due to the variety of results that emerge from its multi-honeypot platform. This platform has additional features including an ELK stack, which includes Elasticsearch for retrieving back end information, Kibana for visualizing the attack log information that is necessary to make our observations and Logstash in order to log information related to attacks and attackers. The T-Pot is based on the network installer Debian which allows multiple honeypot daemons to run on the same network interface. The T-Pot is a dockerized environment where each honeypot daemon is dockerized and contained in its own environment[6]. This means that depending on the protocol the attacker is trying to access, they will be routed to a particular container by T-Pot.  
+In this project, several different honeypot architectures were set up as their own VM instances within the GCP. In order to make the results of this research relevant on a global scale, each honeypot was based in a different location. The different honeypot architectures that were deployed in order to be tested were taken from Paralax’s “awesome-honeypots” GitHub repository[10]. The T-Pot honeypot developed by T-Mobile became the focus for this research, due to the variety of results that emerge from its multi-honeypot platform[9]. This platform has additional features including an ELK stack, which includes Elasticsearch for retrieving back end information, Kibana for visualizing the attack log information that is necessary to make our observations and Logstash in order to log information related to attacks and attackers[9]. The T-Pot is based on the network installer Debian which allows multiple honeypot daemons to run on the same network interface. The T-Pot is a dockerized environment where each honeypot daemon is dockerized and contained in its own environment[6]. This means that depending on the protocol the attacker is trying to access, they will be routed to a particular container by T-Pot.  
 
 .... will add more about different honey pot models here .....
 
@@ -43,10 +43,6 @@ honeypots are cool
 
 ## References
 
-xxx https://dtag-dev-sec.github.io/mediator/feature/2015/03/17/concept.html
-
-xxx https://github.com/paralax/awesome-honeypots
-
 [1]Akiyoshi, Ryoh, et al. “Detecting Emerging Large-Scale Vulnerability Scanning Activities by Correlating Low-Interaction Honeypots with Darknet.” 2018 IEEE 42nd Annual Computer Software and Applications Conference (COMPSAC), 2018, doi:10.1109/compsac.2018.10314. https://ieeexplore.ieee.org/document/8377942/
 
 [2]Bajtoš, Tomáš, et al. “Virtual Honeypots and Detection of Telnet Botnets.” Proceedings of the Central European Cybersecurity Conference 2018 on - CECC 2018, 2018, doi:10.1145/3277570.3277572. https://www.researchgate.net/publication/328519020_Virtual_honeypots_and_detection_of_telnet_botnets
@@ -62,3 +58,7 @@ xxx https://github.com/paralax/awesome-honeypots
 [7]Paliwal, Savita. “Honeypot: A Trap for Attackers.” International Journal of Advanced Research in Computer and Communication Engineering, vol. 6, no. 3, Mar. 2017, pp. 842–845., doi:10.17148/ijarcce.2017.63197.
 
 [8]Song, Jungsuk, et al. “Statistical Analysis of Honeypot Data and Building of Kyoto 2006+ Dataset for NIDS Evaluation.” Proceedings of the First Workshop on Building Analysis Datasets and Gathering Experience Returns for Security - BADGERS '11, 2011, doi:10.1145/1978672.1978676. https://dl.acm.org/doi/abs/10.1145/1978672.1978676
+
+[9]xxx https://dtag-dev-sec.github.io/mediator/feature/2015/03/17/concept.html
+
+[10]xxx https://github.com/paralax/awesome-honeypots
