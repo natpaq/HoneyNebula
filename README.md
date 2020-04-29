@@ -27,9 +27,24 @@ In this project, several different honeypot architectures were set up as their o
 
 In the first part of the project, statistics were compared from honeypots stationed in five different locations: Montréal, São Paulo, Los Angeles, Frankfurt and Tokyo over a twenty-four hour period. Across all of these honeypots, the dionaea honeypot was the most attacked, with the cowrie honeypot being the second most attacked. The honeytrap honeypot was the third most attacked across almost all locations, with the exception being that the honeypot stationed in Montréal had the heralding honeypot as its third most attacked honeypot.
 
+Table y: Top 5 Attacks
+
  <img src="/data_visualization/by_country/attacks_top5.png" width="2000"/>
- Attacks by Country for Different Deployments
+ 
+ Figure y++: Attacks by Country for Different Deployments
+ 
  <img src="/data_visualization/by_country/attacks_by_country.png"/>
+
+Most of the attacks on the Heralding honeypot in Montreal occured before 8 am from Bulgaria as seen in Figure x. Activity associated with this time frame are categroized as "Misc activity" in our Suricata Altert histogram in Figure x++. 
+
+Figure x: Montreal Attacks by Country
+
+<img src="/data_visualization/by_country/montreal_attack_by_contry_and_by_hour.png"/>
+
+Figure x++: Montreal Alerts
+
+<img src="/data_visualization/by_country/alert_category_for_montreal.png"/>
+
 
 The results from p0f in which p0f was able to identify the OS being run on the machines of attackers showed that most of the machines were running Windows 7 or 8. Some repeat attackers across all the different honeypot locations were Petersburg Internet Network ltd., Chinanet and Viettel Corporation. Destination ports that were repeatedly seen to be attacked were 445, 443, 1433 and 8088.
 
@@ -37,15 +52,6 @@ The results from p0f in which p0f was able to identify the OS being run on the m
 
 Heralding honeypot is only within the top 5 for Montreal compared to our other locations. This is a honeypot designed to catch login attempts over several protocols such as ftp, http/https, telnet, pop3/pop3s, ssh, and smtp [11]. 
 
-Most of the attacks from the Heralding honeypot occured before 8 am from Bulgaria. 
-
-Montreal Attacks by Country
-
-<img src="/data_visualization/by_country/montreal_attack_by_contry_and_by_hour.png"/>
-
-Montreal Alerts
-
-<img src="/data_visualization/by_country/alert_category_for_montreal.png"/>
 
 ## Conclusion
 
