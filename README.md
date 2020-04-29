@@ -56,6 +56,8 @@ Heralding honeypot is only within the top 5 for Montreal compared to our other l
 Among the predominant Suricata alert categories for each different deployment, the priority (and thus risk level) of the attack types vary (refer to Figure x++). In São Paulo, the most frequent type of alert category seen was the "Attempted Administrator Privilege Gain" alert, which is of the highest Suricata priority level(1) and indicates. The main attack types for Los Angeles, Frankfurt and Tokyo are of a  slightly lower priority level(2). The honeypot that predominantly had attacks of the lowest priority level was Montreal.
 
 The Misc Activity associated with these attacks taken from Figure x++ is large in number, but low severity [citation needed].
+
+
 ## Conclusion
 
 honeypots are cool
