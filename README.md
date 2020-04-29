@@ -40,9 +40,11 @@ Heralding honeypot is only within the top 5 for Montreal compared to our other l
 Most of the attacks from the Heralding honeypot occured before 8 am from Bulgaria. 
 
 Montreal Attacks by Country
+
 <img src="/data_visualization/by_country/montreal_attack_by_contry_and_by_hour.png"/>
 
 Montreal Alerts
+
 <img src="/data_visualization/by_country/alert_category_for_montreal.png"/>
 
 ## Conclusion
