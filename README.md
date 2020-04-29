@@ -37,7 +37,7 @@ The results from p0f in which p0f was able to identify the OS being run on the m
 
 ## Discussion
 
-xxx
+Why is heraldiong honeypot big in montreal?
 
 ## Conclusion
 
