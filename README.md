@@ -32,7 +32,7 @@ Table y: Top 5 Attacks
  <img src="/data_visualization/by_country/attacks_top5.png" width="2000"/>
  
  Figure y++: Attacks by Country for Different Deployments
- 
+
  <img src="/data_visualization/by_country/attacks_by_country.png"/>
 
 Most of the attacks on the Heralding honeypot in Montreal occured before 8 am from Bulgaria as seen in Figure x. Activity associated with this time frame are categorized as "Misc activity" in our Suricata Alert histogram in Figure x++. 
@@ -50,7 +50,7 @@ The results from p0f in which p0f was able to identify the OS being run on the m
 
 ## Discussion
 
-Heralding honeypot is only within the top 5 for Montreal compared to our other locations. This is a honeypot designed to catch login attempts over several protocols such as ftp, http/https, telnet, pop3/pop3s, ssh, and smtp [11]. 
+Heralding honeypot is only within the top 5 for Montreal compared to our other locations. This is a low interaction honeypot designed to capture credentials from malicious login attempts over several protocols such as ftp, http/https, telnet, pop3/pop3s, ssh, and smtp [11][12]. The Misc Activity associated with these attacks taken from Figure x++ is large in number, but low severity [citation needed].
 
 Among the predominant Suricata alert categories for each different deployment, the priority (and thus risk level) of the attack types vary (refer to Figure x++). In São Paulo, the most frequent type of alert category seen was the "Attempted Administrator Privilege Gain" alert, which is of the highest Suricata priority level(1) and indicates. The main attack types for Los Angeles, Frankfurt and Tokyo are of a  slightly lower priority level(2). The honeypot that predominantly had attacks of the lowest priority level was Montreal.
 
@@ -84,3 +84,6 @@ honeypots are cool
 [11]xxx http://www.covert.io/adventures-with-heralding-a-credential-grabbing-honeypot/
 
 [12]xxx https://redmine.openinfosecfoundation.org/attachments/1529
+
+[13]xxx https://sectechno.com/heralding-credentials-catching-honeypot/
+
