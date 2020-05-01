@@ -11,8 +11,11 @@ A honeypot is a decoy IT infrastructure that is meant to lure attackers by appea
 ## Introduction
 
 Honeypots come in a variety of different architectures that give attackers different levels of access to the operating system. They are classified as either low interaction, medium interaction or high interaction honeypots. Low interaction honeypots give attackers minimal access to the system's operating system, making their deception more detectable by attackers. They are mainly used to detect known attack types and methods. Higher interaction honeypots give attackers more freedom to interact with the operating system and are thus harder to detect by attackers [1]. Attackers are also much more likely to interact with higher interaction honeypots for that reason. The information regarding the exact methods an attacker uses to try to gain access on such a system can then be analyzed by whoever deployed the honeypots, making them useful cybersecurity tools.  
+
 In this project, several different honeypot architectures were set up as their own virtual machine (VM) instances within the GCP. In order to make the results of this research relevant on a global scale, each honeypot was based in a different location. Different honeypot architectures from Paralax’s “awesome-honeypots” GitHub repository [2] were deployed in order to be tested and to determine which honeypots to use for this project. The T-Pot honeypot developed by T-Mobile became the focus for this research, due to the variety of results that emerge from its multi-honeypot platform [3].  
+ 
 This platform offers additional features including an ELK stack, which includes Elasticsearch for retrieving back end information, Kibana for visualizing the attack log information that is necessary to make observations and Logstash in order to log information related to attacks and attackers [3]. The T-Pot is based on the network installer Debian which allows multiple honeypot daemons to run on the same network interface. The T-Pot is a dockerized environment where each honeypot daemon runs in its own container [3]. This means that depending on the protocol the attacker is trying to access, they will be routed to a particular container by T-Pot.  
+ 
 T-Pot uses Suricata for monitoring malicious activity. When one of the existing Suricata rules are matched, the information regarding the attack that caused the match is logged [4]. Kibana is then used to visualize the data that is logged. T-Pot also uses p0f as a fingerprinting tool to identify what type of operating system is being run on the computers of attackers [5].
 
 ## Procedure 
@@ -55,21 +58,19 @@ In the second part of the project, the data from even more VM instances (differe
 The main honeypots attacked over these aggregated instances were the same as in the first part of the project: dionaea, cowrie, honeytrap, rdpy and heralding, which was also one of the top five attacked honeypots in São Paulo in the first part (see Figure 5). The total number of attacks recorded on the HoneyCore deployment over a 24 hour window amounted to more than 1.3 million attacks.  
 
 <img src="/data_visualization/fig_5.png"/>
-Figure 5: Top 5 Most Attacked Honeypots for Core Deployment  
+Figure 5: Top 5 Most Attacked Honeypots for Core Deployment    
 
 Most of the attacks over the 24 hour period came from Ireland, with Russia being the source with the next highest number of attacks, followed by Vietnam, Indonesia and Brazil (see Figure 6).
 
 <img src="/data_visualization/fig_6.png"/>
-Figure 6: Targeted Honeypots and Attacks by Country on HoneyCore  
+Figure 6: Targeted Honeypots and Attacks by Country on HoneyCore   
 
 There were two major attack periods over 24 hours, in which Suricata alert categories of the type “Attempted User Privilege Gain” spiked. 386,333 attacks of this nature occurred at 21:30 and 443,932 attacks of that same type took place at 00:30 (as seen in Figure 7).  
 
 <img src="/data_visualization/fig_7.png"/>
-Figure 7: Suricata Alert Categories for Core Deployment  
+Figure 7: Suricata Alert Categories for Core Deployment    
 
 As seen in the first part of the project, most of the machines that attacked the HoneyCore instance were running Windows 7 or 8, when identifiable by p0f. Among the primary destination ports attacked, the ports 445 and 443 were the ports which were frequently attacked in both the instances from the first part of the project as well as the HoneyCore in the second part. 
-
- 
 
 
 ## Discussion
@@ -83,7 +84,7 @@ In a 2005 article from Microsoft, it was announced that the mssqld protocol was 
 Cowrie was the second most attacked honeypot in both parts of the project. Because cowrie is a medium-high interaction honeypot, it is able to log an attacker’s commands, since it enables attackers to interact more with its system. The most frequently used command across the cowrie honeypots by attackers was the “system” command. This as well as several of the other most common commands seen  (see Figure 8) shows that attackers were trying to get information about the honeypot’s operating system and were trying to execute commands. The second most commonly used command was a command used to verify whether a bot (in this case an fbot) has successfully infiltrated the target device [13], confirming that a large number of the attacks were launched from bots.  
 
 <img src="/data_visualization/fig_8.png"/>
-Figure 8: Top 10 Cowrie Inputs From Frankfurt Deployment  
+Figure 8: Top 10 Cowrie Inputs From Frankfurt Deployment    
 
 The heralding honeypot was only ranked as one of the top 5 attacked honeypots for our Montreal T-Pot deployment, but none of the others (refer to Figure 1). These attacks occurred around 8:00 EST which translates to mid-afternoon in Bulgarian time. For our core deployment, the Heralding honeypot is also within the top five most attacked honeypots, as seen in Figure 6. This is a low interaction honeypot designed to capture malicious login attempts over several protocols such as ftp, http/https, telnet, pop3/pop3s, ssh, and smtp [14]. Malicious login attempts are associated with credential stuffing attacks where botnets attempt to steal a user’s identity in order to collect information, money or goods. According to a 2018 article, it was noted that these types of attacks were on the rise so it is likely to see even more Heralding attacks for our Montreal VM and our core deployment in the future [15].  
 
