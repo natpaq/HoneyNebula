@@ -30,37 +30,42 @@ T-Pot uses Suricata for monitoring malicious activity. When one of the existing 
 In the first part of the project, statistics were compared from honeypots stationed in five different locations: Montréal, São Paulo, Los Angeles, Frankfurt and Tokyo over a twenty-four hour period. Across all of these honeypots, the dionaea honeypot was the most attacked, with the cowrie honeypot being the second most attacked. The honeytrap honeypot was the third most attacked across almost all locations, with the exception being that the honeypot stationed in Montréal had the heralding honeypot as its third most attacked honeypot (see Figure 1).
 
 
- <img src="/data_visualization/by_country/attacks_top5.png" width="2000"/>
+ <img src="/data_visualization/fig_1.png" width="2000"/>
  
 Figure 1: Top 5 Most Attacked Honeypots Per Deployment  
 
 Most of the attacks on the Heralding honeypot in Montreal occurred before 8 AM and originated from Bulgaria, as seen in Figure 3. 
 
-<img src="/data_visualization/by_country/alert_categories.png"/>
+<img src="/data_visualization/fig_2.png"/>
 
 Figure 2: Top 3 Suricata Alert Categories Per Deployment  
 
-<img src="/data_visualization/by_country/montreal_attacks_by_country.png"/>
+<img src="/data_visualization/fig_3.png"/>
 
 Figure 3: Targeted Honeypots and Attacks by Country for Montreal  
 
 The results from p0f in which p0f was able to identify the operating system being run on the machines of attackers showed that most of the machines were running Windows 7 or 8. Destination ports that were repeatedly seen to be attacked were 445, 443, 1433 and 8088. The main reputation that most of the source IP addresses had was “known attacker”, for all of the deployments (see Figure 4 for an example).
 
---Figure 4 --
+<img src="/data_visualization/fig_4.png"/>
+
+Figure 4: Attacker Source IP Reputation for Tokyo Deployment  
 
 In the second part of the project, the data from even more VM instances (different from those in part one) was aggregated into one core instance, HoneyCore. The individual instances were situated in Taiwan, Tokyo, Sydney, Frankfurt, Zürich, Montréal, Iowa and Salt Lake City.  
 
 The main honeypots attacked over these aggregated instances were the same as in the first part of the project: dionaea, cowrie, honeytrap, rdpy and heralding, which was also one of the top five attacked honeypots in São Paulo in the first part (see Figure 5). The total number of attacks recorded on the HoneyCore deployment over a 24 hour window amounted to more than 1.3 million attacks.  
 
---Figure 5 --
+<img src="/data_visualization/fig_5.png"/>
+Figure 5: Top 5 Most Attacked Honeypots for Core Deployment  
 
 Most of the attacks over the 24 hour period came from Ireland, with Russia being the source with the next highest number of attacks, followed by Vietnam, Indonesia and Brazil (see Figure 6).
 
---Figure 6 --
+<img src="/data_visualization/fig_6.png"/>
+Figure 6: Targeted Honeypots and Attacks by Country on HoneyCore  
 
 There were two major attack periods over 24 hours, in which Suricata alert categories of the type “Attempted User Privilege Gain” spiked. 386,333 attacks of this nature occurred at 21:30 and 443,932 attacks of that same type took place at 00:30 (as seen in Figure 7).  
 
---Figure 7 --
+<img src="/data_visualization/fig_7.png"/>
+Figure 7: Suricata Alert Categories for Core Deployment  
 
 As seen in the first part of the project, most of the machines that attacked the HoneyCore instance were running Windows 7 or 8, when identifiable by p0f. Among the primary destination ports attacked, the ports 445 and 443 were the ports which were frequently attacked in both the instances from the first part of the project as well as the HoneyCore in the second part. 
 
@@ -77,12 +82,16 @@ In a 2005 article from Microsoft, it was announced that the mssqld protocol was 
 
 Cowrie was the second most attacked honeypot in both parts of the project. Because cowrie is a medium-high interaction honeypot, it is able to log an attacker’s commands, since it enables attackers to interact more with its system. The most frequently used command across the cowrie honeypots by attackers was the “system” command. This as well as several of the other most common commands seen  (see Figure 8) shows that attackers were trying to get information about the honeypot’s operating system and were trying to execute commands. The second most commonly used command was a command used to verify whether a bot (in this case an fbot) has successfully infiltrated the target device [13], confirming that a large number of the attacks were launched from bots.  
 
---Figure 8 --
+<img src="/data_visualization/fig_8.png"/>
+Figure 8: Top 10 Cowrie Inputs From Frankfurt Deployment  
 
 The heralding honeypot was only ranked as one of the top 5 attacked honeypots for our Montreal T-Pot deployment, but none of the others (refer to Figure 1). These attacks occurred around 8:00 EST which translates to mid-afternoon in Bulgarian time. For our core deployment, the Heralding honeypot is also within the top five most attacked honeypots, as seen in Figure 6. This is a low interaction honeypot designed to capture malicious login attempts over several protocols such as ftp, http/https, telnet, pop3/pop3s, ssh, and smtp [14]. Malicious login attempts are associated with credential stuffing attacks where botnets attempt to steal a user’s identity in order to collect information, money or goods. According to a 2018 article, it was noted that these types of attacks were on the rise so it is likely to see even more Heralding attacks for our Montreal VM and our core deployment in the future [15].  
+
 A key difference between the separate instances in the first part of the project and the HoneyCore deployment in the second part is the volume of attacks on the Heralding honeypot. For the HoneyCore, there were small yet consistent attacks with minimal spiking over the 24 hour period (see Figure 6), whereas in Montreal there was only one high volume attack spike in the morning (refer to Figure 3). This suggests that there were two different methods of credential stuffing used by botnets. Further investigation would be required to see if there were more than two methods of credential stuffing attacks being used.  
+
 The priority (and thus risk level) of the attack types among the predominant Suricata alert categories observed for each different deployment vary (refer to Figure 2). In the São Paulo deployment the most frequent type of alert category seen was the "Attempted Administrator Privilege Gain" alert. It is of the highest Suricata priority level, which is a priority of 1. The main attack types for Los Angeles, Frankfurt and Tokyo are of a slightly lower priority level. The honeypot that predominantly had attacks of the lowest priority level was Montreal [16].  
-Most of the source IP addresses involved in the attacks were reputed as being “known attackers”. This is likely because, of the assortment of honeypots contained in the T-Pot, most are low interaction honeypots. These honeypots are less likely to be extensively interacted with because of the limited access they offer to attackers. This restricted access makes them more easily identifiable as a honeypot and less convincing as a real IT infrastructure.   
+Most of the source IP addresses involved in the attacks were reputed as being “known attackers”. This is likely because, of the assortment of honeypots contained in the T-Pot, most are low interaction honeypots. These honeypots are less likely to be extensively interacted with because of the limited access they offer to attackers. This restricted access makes them more easily identifiable as a honeypot and less convincing as a real IT infrastructure.  
+  
 By being labeled as a “known attacker” this means that the IP address in question has been reported for malicious activities before and could be a spammer or botnet. This explains why, despite the low interactivity of the majority of the honeypots deployed, there were numerous attacks from these known attackers. A botnet would not be set up in such a way that it would fingerprint [17] a target IP and then stop attacking if it found the host to be an unviable target (such as a low interaction honeypot). If it were set up that way, it would risk missing out on a future potential victim since the honeypot infrastructure might eventually get replaced by an actual IT infrastructure. For this reason, it is safer for many of these known attackers to hit all potential victims and to not discriminate by fingerprinting in order to maximize their chances of a potential hit.  
 
 
