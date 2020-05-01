@@ -7,29 +7,7 @@ provider "google" {
 
 
 ########################################################################
-#                              Networking                              #
-########################################################################
-#resource "google_compute_network" "default" {
-#  name = "honeynetwork"
-#}
-
-#resource "google_compute_subnetwork" "default" {
-#  name          = "honeysubnet"
-#  ip_cidr_range = "10.0.0.0/16"
-#  region        = "northamerica-northeast1"
-#  network       = google_compute_network.default
-#}
-#
-#resource "google_compute_subnetwork" "subnet-us-ce" {
-#	
-#}
-#
-#resource "google_compute_network" "subnet-eu" {
-#	
-#}
-#
-########################################################################
-#                              Instances                               #
+#                              Honeycore                               #
 ########################################################################
 
 resource "google_compute_instance" "honeycore" {
@@ -92,6 +70,11 @@ resource "google_compute_instance" "honeycore" {
     }
   }
 }
+
+
+########################################################################
+#                              Honeypots                               #
+########################################################################
 
 resource "google_compute_instance" "honeypot" {
   for_each = var.honeypot_regionmap
